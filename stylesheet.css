@@ -512,6 +512,47 @@ footer {
   scrollbar-color: var(--accent-color) var(--secondary-color);
 }
 
+.blog-container-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.scroll-btn {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: var(--text-color);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+  position: absolute;
+}
+
+.scroll-btn:hover {
+  background-color: var(--primary-color);
+}
+
+.scroll-btn.left {
+  left: -20px;
+}
+
+.scroll-btn.right {
+  right: -20px;
+}
+
+@media (max-width: 768px) {
+  .scroll-btn {
+    display: none;
+    /* Hide arrows on mobile where touch scroll is native */
+  }
+}
+
 /* Custom Scrollbar for Chrome/Safari */
 .blog-grid::-webkit-scrollbar {
   height: 8px;
