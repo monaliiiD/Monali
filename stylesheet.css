@@ -497,13 +497,47 @@ footer {
 }
 
 /* Blog Section */
+/* Horizontal Scrolling Blog Container */
 .blog-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  display: flex;
+  overflow-x: auto;
   gap: 2rem;
+  padding-bottom: 2rem;
+  /* Space for scrollbar */
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  /* Smooth scroll on mobile */
+  scrollbar-width: thin;
+  /* Firefox */
+  scrollbar-color: var(--accent-color) var(--secondary-color);
 }
 
+/* Custom Scrollbar for Chrome/Safari */
+.blog-grid::-webkit-scrollbar {
+  height: 8px;
+}
+
+.blog-grid::-webkit-scrollbar-track {
+  background: var(--secondary-color);
+  border-radius: 4px;
+}
+
+.blog-grid::-webkit-scrollbar-thumb {
+  background: var(--accent-color);
+  border-radius: 4px;
+}
+
+.blog-grid::-webkit-scrollbar-thumb:hover {
+  background: #fff;
+}
+
+/* Ensure cards have fixed width so they don't shrink */
 .blog-card {
+  min-width: 320px;
+  max-width: 320px;
+  flex: 0 0 auto;
+  /* Do not shrink or grow */
+  /* existing styles continue below... */
   background-color: var(--secondary-color);
   border-radius: 12px;
   overflow: hidden;
@@ -536,11 +570,14 @@ footer {
 }
 
 .tiktok-thumbnail .tiktok-embed {
-  margin: -10px 0 0 0 !important;
-  /* Remove default margins and pull up */
-  transform: scale(0.65);
+  margin: -1px 0 0 0 !important;
+  transform: scale(0.60);
   transform-origin: top center;
   width: 100%;
+  height: 250%;
+  /* Force height to push bottom content out of view */
+  pointer-events: none;
+  /* Disable interaction with embed in thumbnail */
 }
 
 .click-overlay {
