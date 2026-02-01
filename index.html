@@ -16,7 +16,7 @@
   <meta property="og:type" content="website">
   <meta property="og:image" content="images/Monali Bandhuratne.jpeg">
   <!-- <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"> -->
-  <link rel="stylesheet" href="stylesheet.css?v=4">
+  <link rel="stylesheet" href="stylesheet.css?v=5">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
@@ -44,10 +44,11 @@
       <a href="#home" class="nav-logo">Monali</a>
       <ul class="nav-menu">
         <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
-        <li class="nav-item"><a href="#education" class="nav-link">Education</a></li>
-        <li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
-        <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+        <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="#case-studies" class="nav-link">Case Studies</a></li>
         <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+        <li class="nav-item"><a href="#process" class="nav-link">Process</a></li>
+        <li class="nav-item"><a href="#artifacts" class="nav-link">Samples</a></li>
         <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
       <div class="hamburger">
@@ -59,122 +60,236 @@
   </nav>
 
   <main>
-    <!-- HOME SECTION -->
+    <!-- 1. HOME / LANDING PAGE -->
     <section id="home" class="section active-section">
       <div class="container home-container">
         <div class="home-text">
           <h1 class="animate-text">Hi, I'm <span class="highlight-text">Monali Bandhuratne</span></h1>
-          <h2 class="animate-text delay-1">Project Manager</h2>
-          <p class="animate-text delay-2">
-            Detail-oriented IT and Management graduate with hands-on experience in project coordination across Agile
-            environments.
-            Skilled in task tracking, risk management, stakeholder communication, and end-to-end project support.
-            Proficient in managing backlogs, documentation, reporting, and cross-functional collaboration.
-            Adaptable and delivery-focused, ready to contribute to dynamic teams in web, cloud, ERP, or software
-            development.
+          <h2 class="animate-text delay-1">Associate IT Project Manager</h2>
+          <p class="animate-text delay-2 lead-text">
+            Delivering digital projects through clear communication, structures execution, and reliable delivery.
           </p>
-          <div class="social-links animate-text delay-3">
-            <a href="mailto:monali.dulhara@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
-            <a href="https://www.linkedin.com/in/monali-bandhuratne/" target="_blank"><i
-                class="fab fa-linkedin"></i></a>
-            <!-- <a href="#" target="_blank"><i class="fab fa-github"></i></a> -->
+          <div class="cta-group animate-text delay-3">
+            <a href="#case-studies" class="btn btn-primary">View My Work</a>
+            <a href="data/Monali Bandhuratne - Project Manager CV.pdf" class="btn btn-outline" target="_blank">Download
+              CV</a>
           </div>
-        </div>
-        <div class="home-image animate-img">
-          <img src="images/Monali Bandhuratne.jpeg" alt="Monali Bandhuratne">
+
+          <!-- Quick Highlights Cards -->
+          <div class="highlights-grid animate-text delay-3">
+            <div class="highlight-card">
+              <i class="fas fa-laptop-code"></i>
+              <h3>Web & Digital</h3>
+              <p>Projects</p>
+            </div>
+            <div class="highlight-card">
+              <i class="fas fa-sync-alt"></i>
+              <h3>Agile & Waterfall</h3>
+              <p>Delivery</p>
+            </div>
+            <div class="highlight-card">
+              <i class="fas fa-tools"></i>
+              <h3>Jira • Confluence</h3>
+              <p>Stack</p>
+            </div>
+            <div class="highlight-card">
+              <i class="fas fa-users"></i>
+              <h3>Client</h3>
+              <p>Communication</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- BENTO GRID SECTION (Profile Overview) -->
-    <section id="profile" class="section">
+    <!-- 2. ABOUT ME -->
+    <section id="about" class="section">
       <div class="container">
-        <h2 class="section-title">Profile Overview</h2>
-        <div class="bento-grid">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+          <div class="about-text">
+            <h3>Professional Summary</h3>
+            <p>
+              I’m an Associate IT Project Manager with hands-on experience managing web and digital projects across
+              multiple clients. I work closely with designers, developers, and stakeholders to ensure timelines, scope,
+              and expectations stay aligned.
+            </p>
 
-          <!-- Box 1: Profile Image & Intro (Large) -->
-          <div class="bento-card profile-card">
-            <div class="card-content">
-              <h3>About Me</h3>
-              <p>Detail-oriented IT and Management graduate skilled in project coordination, risk management, and
-                stakeholder communication.</p>
+            <div class="what-im-good-at">
+              <h3>What I’m Good At</h3>
+              <ul>
+                <li><i class="fas fa-check-circle"></i> Translating requirements into actionable tasks</li>
+                <li><i class="fas fa-check-circle"></i> Coordinating cross-functional teams</li>
+                <li><i class="fas fa-check-circle"></i> Tracking progress and managing risks</li>
+                <li><i class="fas fa-check-circle"></i> Clear client and stakeholder communication</li>
+              </ul>
+            </div>
+          </div>
+          <div class="about-image">
+            <img src="images/Monali Bandhuratne.jpeg" alt="Monali Bandhuratne">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. PROJECTS / CASE STUDIES -->
+    <section id="case-studies" class="section">
+      <div class="container">
+        <h2 class="section-title">Case Studies</h2>
+        <div class="case-study-list">
+
+          <!-- Case Study 1 -->
+          <div class="case-study-card">
+            <div class="cs-header">
+              <h3>SmartDine: Restaurant Management Solution</h3>
+              <span class="cs-meta">Web Application | 6 Months</span>
+            </div>
+            <div class="cs-body">
+              <div class="cs-section">
+                <h4>Overview</h4>
+                <p>Developed a web application to streamline restaurant operations, including order management, table
+                  reservations, and customer engagement features.</p>
+              </div>
+
+              <div class="cs-grid">
+                <div class="cs-col">
+                  <h4>My Role & Team</h4>
+                  <ul>
+                    <li><strong>Role:</strong> Project Lead</li>
+                    <li><strong>Team:</strong> 4 Developers, 1 QA</li>
+                    <li><strong>Tools:</strong> Jira, GitHub, Figma</li>
+                  </ul>
+                </div>
+                <div class="cs-col">
+                  <h4>Challenges</h4>
+                  <ul>
+                    <li>Tight deadlines for MVP launch</li>
+                    <li>Integration with legacy POS systems</li>
+                    <li>Scope creep in reservation features</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="cs-section">
+                <h4>Actions I Took</h4>
+                <ul>
+                  <li>Implemented agile sprints to manage scope.</li>
+                  <li>Facilitated daily standups to resolve blockers early.</li>
+                  <li>Created detailed user stories for clarity.</li>
+                </ul>
+              </div>
+
+              <div class="cs-section">
+                <h4>Outcome</h4>
+                <p class="cs-outcome">✅ Delivered functional MVP on time. Improved order processing speed by 30%.</p>
+              </div>
             </div>
           </div>
 
-          <!-- Box 2: Skills (Medium) -->
-          <div class="bento-card skills-card">
-            <h3>Stack & Tools</h3>
-            <div class="skill-tags">
-              <span>Agile</span><span>Waterfall</span><span>Jira</span><span>Confluence</span>
-              <span>MS Project</span><span>SDLC</span><span>Risk Mgmt</span><span>Analysis</span>
+          <!-- Case Study 2 -->
+          <div class="case-study-card">
+            <div class="cs-header">
+              <h3>Impact of IT GRC on Org. Performance</h3>
+              <span class="cs-meta">Academic Research | 1 Year</span>
             </div>
-          </div>
-
-          <!-- Box 3: Education (Tall) -->
-          <div class="bento-card education-card">
-            <h3>Education</h3>
-            <div class="edu-item">
-              <h4>BSc. (Hons) IT</h4>
-              <p>SLIIT (Second Upper)</p>
+            <div class="cs-body">
+              <div class="cs-section">
+                <h4>Overview</h4>
+                <p>Conducted research on how IT governance, risk, and compliance impact organizational success, with
+                  organizational culture as a mediator.</p>
+              </div>
+              <div class="cs-section">
+                <h4>Outcome</h4>
+                <p class="cs-outcome">🏆 Awarded Best Research Paper at IRCUWU.</p>
+              </div>
             </div>
-            <div class="edu-item">
-              <h4>BBM. (Hons) Mgmt</h4>
-              <p>Uva Wellassa Univ. (First Class)</p>
-            </div>
-          </div>
-
-          <!-- Box 4: Latest Role (Wide) -->
-          <div class="bento-card role-card">
-            <h3>Current Role</h3>
-            <h2>Project Management Coordinator</h2>
-            <p><strong>Antyra Solutions</strong> | May 2025 – Present</p>
-          </div>
-
-          <!-- Box 5: Leadership (Small) -->
-          <div class="bento-card leadership-card">
-            <h3>Leadership</h3>
-            <ul>
-              <li>Asst. Secretary (IT Community, SLIIT)</li>
-              <li>Director (Rotaract RID 3220)</li>
-            </ul>
-          </div>
-
-          <!-- Box 6: Stats/Certifications (Small) -->
-          <div class="bento-card stats-card">
-            <h3>Certifications</h3>
-            <p>Google PM, Microsoft BA</p>
           </div>
 
         </div>
       </div>
     </section>
 
-    <!-- DETAILED EXPERIENCE SECTION -->
-    <section id="experience" class="section">
+    <!-- 4. SKILLS & TOOLS -->
+    <section id="skills" class="section">
       <div class="container">
-        <h2 class="section-title">Career Timeline</h2>
-        <div class="timeline">
+        <h2 class="section-title">Skills & Tools</h2>
+        <div class="skills-grid-layout">
 
-          <div class="timeline-item">
-            <div class="timeline-date">May 2025 – Present</div>
-            <div class="timeline-content">
-              <h3>Project Management Coordinator</h3>
-              <h4>Antyra Solutions</h4>
-              <p>Managing 10+ high-profile brands, facilitating design-dev communication, and executing web/e-commerce
-                projects.</p>
-            </div>
+          <div class="skill-category">
+            <h3>Project Management</h3>
+            <ul>
+              <li>Agile, Scrum, Waterfall <span class="skill-sub">Used in all projects</span></li>
+              <li>Sprint Planning & Tracking</li>
+              <li>Risk & Dependency Management</li>
+            </ul>
           </div>
 
-          <div class="timeline-item">
-            <div class="timeline-date">Mar 2024 – Mar 2025</div>
-            <div class="timeline-content">
-              <h3>Project Management Intern</h3>
-              <h4>London Stock Exchange Group</h4>
-              <p>Supported Agile execution across 11 teams, coordinated 50+ meetings, and maintained critical
-                documentation.</p>
-            </div>
+          <div class="skill-category">
+            <h3>Tools</h3>
+            <ul>
+              <li>Jira, ClickUp, Trello</li>
+              <li>Confluence, Notion</li>
+              <li>Google Workspace, Slack</li>
+            </ul>
           </div>
 
+          <div class="skill-category">
+            <h3>Delivery & Communication</h3>
+            <ul>
+              <li>Status Reporting</li>
+              <li>Client Updates</li>
+              <li>Cross-team Coordination</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. PROCESS & WORKING STYLE -->
+    <section id="process" class="section">
+      <div class="container">
+        <h2 class="section-title">My Working Style</h2>
+        <div class="process-grid">
+          <div class="process-card">
+            <h3>How I Run a Project</h3>
+            <ul>
+              <li><i class="fas fa-search"></i> Requirement Clarification</li>
+              <li><i class="fas fa-calendar-alt"></i> Scope & Timeline Alignment</li>
+              <li><i class="fas fa-tasks"></i> Task Breakdown & Tracking</li>
+              <li><i class="fas fa-chart-line"></i> Weakly Reporting</li>
+            </ul>
+          </div>
+          <div class="process-card">
+            <h3>My PM Principles</h3>
+            <ul>
+              <li><i class="fas fa-eye"></i> Transparency over surprises</li>
+              <li><i class="fas fa-file-alt"></i> Clear documentation</li>
+              <li><i class="fas fa-exclamation-triangle"></i> Early risk identification</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. ARTIFACTS & SAMPLES -->
+    <section id="artifacts" class="section">
+      <div class="container">
+        <h2 class="section-title">Samples</h2>
+        <p class="section-subtitle">A glimpse into how I document and organize work.</p>
+        <div class="artifacts-grid">
+          <!-- Placeholders for actual artifacts -->
+          <div class="artifact-card">
+            <i class="fas fa-file-pdf"></i>
+            <h3>Status Report Template</h3>
+            <p>Sample Only</p>
+          </div>
+          <div class="artifact-card">
+            <i class="fas fa-columns"></i>
+            <h3>Sprint Board</h3>
+            <p>Sample Only</p>
+          </div>
         </div>
       </div>
     </section>
