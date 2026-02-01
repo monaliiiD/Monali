@@ -1,29 +1,28 @@
-/* Global Styles */
-/* Mint & Black Theme Variables */
---bg-color: #050505;
-/* Deepest Black */
---bg-secondary: #0a0a0a;
-/* Soft Black */
---text-main: #ffffff;
---text-muted: #a1a1aa;
-/* Neutral 400 */
---accent-primary: #98FF98;
-/* Mint Green */
---accent-color: #98FF98;
-/* Alias for compatibility */
---accent-secondary: #3EB489;
-/* Darker Mint */
---accent-glow: rgba(152, 255, 152, 0.15);
+:root {
+  /* Mint & White Theme Variables */
+  --bg-color: #ffffff;
+  /* White Background */
+  --bg-secondary: #f8f9fa;
+  /* Light Grey for Cards */
+  --text-main: #1f2937;
+  /* Dark Grey (almost black) for primary text */
+  --text-muted: #4b5563;
+  /* Medium Grey for secondary text */
+  --accent-primary: #98FF98;
+  /* Mint Green */
+  --accent-color: #2e7d32;
+  /* Darker Green for visibility on white */
+  --accent-secondary: #4ade80;
+  /* Bright Mint */
+  --accent-glow: rgba(46, 125, 50, 0.15);
+  /* Darker shadow */
 
---card-bg: rgba(20, 20, 20, 0.6);
---card-border: 1px solid rgba(255, 255, 255, 0.08);
---glass-blur: 16px;
+  --card-bg: rgba(255, 255, 255, 0.8);
+  --card-border: 1px solid rgba(0, 0, 0, 0.05);
+  --glass-blur: 12px;
 
---font-main: 'Inter',
-system-ui,
--apple-system,
-sans-serif;
---nav-height: 70px;
+  --font-main: 'Lato', sans-serif;
+  --nav-height: 70px;
 }
 
 * {
@@ -38,9 +37,7 @@ body {
   color: var(--text-main);
   line-height: 1.6;
   overflow-x: hidden;
-  background-image:
-    radial-gradient(circle at 15% 50%, rgba(152, 255, 152, 0.03) 0%, transparent 25%),
-    radial-gradient(circle at 85% 30%, rgba(62, 180, 137, 0.03) 0%, transparent 25%);
+  /* Removed dark gradients */
 }
 
 a {
