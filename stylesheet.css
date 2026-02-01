@@ -1,25 +1,29 @@
 /* Global Styles */
-:root {
-  /* Mint & Black Theme Variables */
-  --bg-color: #050505;
-  /* Deepest Black */
-  --bg-secondary: #0a0a0a;
-  /* Soft Black */
-  --text-main: #ffffff;
-  --text-muted: #a1a1aa;
-  /* Neutral 400 */
-  --accent-primary: #98FF98;
-  /* Mint Green */
-  --accent-secondary: #3EB489;
-  /* Darker Mint */
-  --accent-glow: rgba(152, 255, 152, 0.15);
+/* Mint & Black Theme Variables */
+--bg-color: #050505;
+/* Deepest Black */
+--bg-secondary: #0a0a0a;
+/* Soft Black */
+--text-main: #ffffff;
+--text-muted: #a1a1aa;
+/* Neutral 400 */
+--accent-primary: #98FF98;
+/* Mint Green */
+--accent-color: #98FF98;
+/* Alias for compatibility */
+--accent-secondary: #3EB489;
+/* Darker Mint */
+--accent-glow: rgba(152, 255, 152, 0.15);
 
-  --card-bg: rgba(20, 20, 20, 0.6);
-  --card-border: 1px solid rgba(255, 255, 255, 0.08);
-  --glass-blur: 16px;
+--card-bg: rgba(20, 20, 20, 0.6);
+--card-border: 1px solid rgba(255, 255, 255, 0.08);
+--glass-blur: 16px;
 
-  --font-main: 'Inter', system-ui, -apple-system, sans-serif;
-  --nav-height: 70px;
+--font-main: 'Inter',
+system-ui,
+-apple-system,
+sans-serif;
+--nav-height: 70px;
 }
 
 * {
