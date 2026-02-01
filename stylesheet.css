@@ -452,7 +452,39 @@ footer {
   /* Very Dark */
   color: #64748b;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
-  ;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Moving Duck Animation */
+.duck-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  overflow: hidden;
+  pointer-events: none;
+  /* Let interactions pass through */
+}
+
+.moving-duck {
+  font-size: 2rem;
+  position: absolute;
+  top: 10px;
+  animation: walkAcross 15s linear infinite;
+  transform: scaleX(-1);
+  /* Face right */
+}
+
+@keyframes walkAcross {
+  0% {
+    left: -50px;
+  }
+
+  100% {
+    left: 100%;
+  }
 }
 
 /* Animations */
