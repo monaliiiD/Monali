@@ -1,13 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // 1. Mobile Navigation Toggle
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
     const navLinks = document.querySelectorAll('.nav-link');
 
-    // Mobile Menu Toggle
-    hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
-        navMenu.classList.toggle('active');
-    });
+    if (hamburger) {
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+    }
 
     // Close mobile menu when clicking a link
     navLinks.forEach(link => {
@@ -17,19 +19,18 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Smooth Scrolling for Anchor Links
+    // 2. Smooth Scrolling for Anchor Links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
-
             const targetId = this.getAttribute('href');
-            if (targetId === '#') return;
+            const targetelement = document.querySelector(targetId);
 
-            const targetElement = document.querySelector(targetId);
-            if (targetElement) {
-                const headerOffset = 70;
-                const elementPosition = targetElement.getBoundingClientRect().top;
-                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+            if (targetelement) {
+                // Offset for fixed header
+                const headerOffset = 80;
+                const elementPosition = targetelement.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.scrollY - headerOffset;
 
                 window.scrollTo({
                     top: offsetPosition,
@@ -39,36 +40,56 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Active Link Highlighting on Scroll
-    const sections = document.querySelectorAll('section');
+    // 3. Intersection Observer for Scroll Animations
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
 
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                // Optional: Stop observing once visible if you don't want repeat animations
+                // observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    const animatedElements = document.querySelectorAll('.animate-text, .bento-card, .timeline-item, .project-card, .news-item');
+    animatedElements.forEach(el => observer.observe(el));
+
+    // 4. Navbar Background on Scroll
+    const navbar = document.querySelector('.navbar');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            navbar.style.background = 'rgba(5, 5, 5, 0.95)';
+            navbar.style.boxShadow = '0 4px 20px rgba(0,0,0,0.5)';
+        } else {
+            navbar.style.background = 'transparent';
+            navbar.style.boxShadow = 'none';
+        }
+    });
+
+    // 5. Active Link Highlighting
     window.addEventListener('scroll', () => {
         let current = '';
+        const sections = document.querySelectorAll('section');
 
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
-            if (pageYOffset >= (sectionTop - sectionHeight / 3)) {
+            constsectionHeight = section.clientHeight;
+            if (pageYOffset >= (sectionTop - 200)) {
                 current = section.getAttribute('id');
             }
         });
 
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href').includes(current)) {
-                link.classList.add('active');
+        navLinks.forEach(li => {
+            li.classList.remove('active');
+            if (li.getAttribute('href').includes(current)) {
+                li.classList.add('active');
             }
         });
     });
 });
-// Blog Scroll Function
-function scrollBlog(direction) {
-    const container = document.querySelector('.blog-grid');
-    const scrollAmount = 340; // Card width (320px) + Gap (20px)
-
-    if (direction === 'left') {
-        container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-    } else {
-        container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-    }
-}
